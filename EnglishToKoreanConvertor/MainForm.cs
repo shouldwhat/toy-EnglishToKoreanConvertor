@@ -6,9 +6,9 @@ namespace EnglishToKoreanConvertor
 {
     public partial class MainForm : Form
     {
-        globalKeyboardHook gkh = new globalKeyboardHook();
+        GlobalKeyboardHook gkh = new GlobalKeyboardHook();
 
-        ISearchingService searchingService = SearchingService.getInstance();
+        ISearchingService searchingService = DaumSearchingService.getInstance();
 
         public MainForm()
         {
@@ -19,10 +19,10 @@ namespace EnglishToKoreanConvertor
         private void InitializeEventHandler()
         {
             gkh.HookedKeys.Add(Keys.F2);
-            gkh.KeyDown += Gkh_KeyDown;
+            gkh.KeyDown += hookKeyDown;
         }
 
-        private void Gkh_KeyDown(object sender, KeyEventArgs e)
+        private void hookKeyDown(object sender, KeyEventArgs e)
         {
             this.showTooltip();
         }

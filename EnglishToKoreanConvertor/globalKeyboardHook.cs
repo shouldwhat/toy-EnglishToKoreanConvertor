@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace EnglishToKoreanConvertor
 {
-    class globalKeyboardHook
+    class GlobalKeyboardHook
     {
         #region Constant, Structure and Delegate Definitions
         /// <summary>
@@ -58,18 +58,18 @@ namespace EnglishToKoreanConvertor
 
         #region Constructors and Destructors
         /// <summary>
-        /// Initializes a new instance of the <see cref="globalKeyboardHook"/> class and installs the keyboard hook.
+        /// Initializes a new instance of the <see cref="GlobalKeyboardHook"/> class and installs the keyboard hook.
         /// </summary>
-        public globalKeyboardHook()
+        public GlobalKeyboardHook()
         {
             hook();
         }
 
         /// <summary>
         /// Releases unmanaged resources and performs other cleanup operations before the
-        /// <see cref="globalKeyboardHook"/> is reclaimed by garbage collection and uninstalls the keyboard hook.
+        /// <see cref="GlobalKeyboardHook"/> is reclaimed by garbage collection and uninstalls the keyboard hook.
         /// </summary>
-        ~globalKeyboardHook()
+        ~GlobalKeyboardHook()
         {
             unhook();
         }
