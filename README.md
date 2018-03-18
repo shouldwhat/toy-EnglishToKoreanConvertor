@@ -37,8 +37,11 @@
 
 ---
 
+
 * **클래스 구조**
-![](/images/class.png)
+
+	
+	![](/images/class.png)
 
 ---
 
